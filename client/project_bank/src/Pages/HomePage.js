@@ -3,6 +3,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../css/homepage.css';
+import '../css/homePageMobile.css';
 import { staggerChildren, fadeInAnimation } from '../Components/animationUtils';
 
 function HomePage({ isMenuOpen }) {
@@ -48,8 +49,20 @@ function HomePage({ isMenuOpen }) {
             </div>
 
             <div className="cards">
-              <div className="header">Ekiti</div>
-              <div className="address"> 45, Ado Central Business District, Ekiti, Nigeria</div>
+              <div className="header">Ibafo</div>
+              <div className="address"> 410, Redeemers Crescent , Ogun, Nigeria</div>
+            </div>
+            <div className="cards">
+              <div className="header">Eleyele</div>
+              <div className="address"> Plot 5A, Eleyele Interchange, Ibadan, Nigeria</div>
+            </div>
+            <div className="cards">
+              <div className="header">Isale Eko</div>
+              <div className="address"> 30B, Idumota Market, Lagos, Nigeria</div>
+            </div>
+            <div className="cards">
+              <div className="header">Ojuwoye Provisions Market</div>
+              <div className="address"> 142, New Mushin Road, Lagos, Nigeria</div>
             </div>
           </motion.div>
         </div>

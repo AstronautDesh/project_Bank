@@ -1,0 +1,28 @@
+@media screen and (max-width: 480px) {}
+
+/* Tab */
+
+@media screen and (min-width: 480px) and (max-width: 834px) {
+    .home {
+        height: var(--absoluteHeight);
+    }
+
+    .menu-list {
+        padding: 8rem 0px 0px .5rem;
+    }
+
+    .menu-list h1 {
+        font-size: 13vw;
+        position: relative;
+        overflow: hidden;
+    }
+      
+      .cards .header {
+        font-size: clamp(1rem, calc(.5rem + 2vw), 2.5rem);
+      }
+      .cards .address {
+        font-size: clamp(1rem, calc(.3rem + 2vw), 2.5rem);
+        padding-left: 1rem;
+      }
+
+}

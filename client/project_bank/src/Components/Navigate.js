@@ -3,6 +3,7 @@ import React from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../css/Navbar.css';
+import '../css/navbarMobile.css';
 
 function Navigate({ isMenuOpen, toggleMenu }) {
   return (
