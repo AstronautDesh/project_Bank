@@ -1,158 +1,109 @@
-@font-face {
-    font-family:'Macondo';
-    src: url(../Fontz/Macondo-Regular.woff);
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.contact {
-    width: 100%;
-    height: 100vh;
+/*ContactPage Stylesheet */
+
+@media screen and (max-width: 480px){
+  .contact {
+    width: var(--width);
+    height: var(--absoluteHeight);
     font-family: 'Macondo';
+    background-color: var(--bgColorOverlay);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
-    background-color: rgb(239, 232, 232, .8);
+  }
+  
+  .pitch-box {
+    font-family:'Macondo';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    position: relative;
+    background-color: var(--bgColorOverlay);
+  }
+  
+  .contact-pitch {
+    width: fit-content;
+    height: var(--absoluteHeight);
+    font-size: calc(3vw + 1.2rem);
+    text-justify: newspaper;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-shadow: .1rem .1rem 0px orchid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .icon-grid {
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .1px;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: adds a slight background */
+  }
 
-    grid-template-rows: repeat(auto-fit, minmax(33.33%, 1fr));
-    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-    gap: 0px;
-    position: relative;
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 100%;
+  background-color: var(--bgColorOverlay);
 }
 
-#item-0 {
-   grid-row-start: 1;
-   grid-column-start: 1;
-   grid-row-end: 3;
-   grid-column-end: 6;
-   font-family:'Macondo';
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.icon-container::before {
+  content: attr(data-contact);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgba(38, 2, 37, 0.9);
+  color: white;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
 }
-.contact-pitch{
-    width: 50%;
-   height: 100%;
-   font-size: 4rem;
-   text-justify: newspaper;
-   text-align: center;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-weight: bold;
-}
-#item-1 {
-   grid-row-start: 3;
-   grid-column-start: 1;
 
-   grid-row-end: 4;
-   grid-column-end: 2;
-   
-}
-#item-2 {
-   grid-row-start: 3;
-   grid-column-start: 2;
-
-   grid-row-end: 4;
-   grid-column-end: 3;
-   
-}
-#item-3 {
-   grid-row-start: 3;
-   grid-column-start: 3;
-
-   grid-row-end: 4;
-   grid-column-end: 4;
-   
-}
-#item-4 {
-   grid-row-start: 3;
-   grid-column-start: 4;
-
-   grid-row-end: 4;
-   grid-column-end: 5;
-   
-}
-#item-5 {
-   grid-row-start: 3;
-   grid-column-start: 5;
-
-   grid-row-end: 4;
-   grid-column-end: 6;
-   
+.icon-container:hover::before {
+  transform: translateY(0);
 }
 
 .icon {
-    font-size: 2rem;
-    position: absolute;
-    bottom: 0;
-    transition: bottom 0.3s ease;
-    z-index: 1;
-    transition: opacity .3s ease;
-  }
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
 
-  .icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: height 0.3s ease;
-    height: 100%;
-    background-color: rgb(66, 44, 3, .2);
-  }
-  
-  .icon-container::before {
-    content: attr(data-contact);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    background-color: rgb(38, 2, 37);
-    color: white;
-    text-align: center;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-    overflow: hidden;
-  }
-  
-  .icon-container:hover {
-    height: 100%;
-  }
-  
-  .icon-container:hover::before {
-    transform: translateY(0);
-  }
-  
-  .icon-container:hover .icon {
-    bottom: 40px;
-    opacity: .2;
-  }
-  
-  .icon-container[data-contact] {
-   /* Styles for .icon-container elements with data-contact */
-   background-color: #f0f0f0;
- }
- 
- .phone[data-contact] {
-   /* Styles for elements with both .phone class and data-contact attribute */
-   color: blue;
- }
-  /* Add specific styles for each icon if needed */
-  .phone { /* styles for phone icon */ }
-  .email { /* styles for email icon */ }
-  .whatsapp { /* styles for whatsapp icon */ }
-  .facebook { /* styles for facebook icon */ }
-  .twitter { /* styles for twitter icon */ }
+.icon-container:hover .icon {
+  transform: translateY(-50px);
+  opacity: 0.2;
+}
 
+/* Specific styles for each icon type */
+.phone { color: #007bff; }
+.email { color: #28a745; }
+.whatsapp { color: #25D366; }
+.facebook { color: #3b5998; }
+.twitter { color: #1DA1F2; }
 
-
+}

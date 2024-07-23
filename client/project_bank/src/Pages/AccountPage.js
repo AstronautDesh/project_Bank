@@ -3,20 +3,12 @@ import React from 'react';
 import '../css/accountpage.css';
 import IconsComponent from '../Components/MenuList';
 import UserLogin from '../Components/UserLogin';
-import { slideUpCustomBezier } from '../Components/animationUtils';
-import { motion as m, AnimatePresence } from 'framer-motion';
 
 function AccountPage({ isMenuOpen }) {
   console.log('im here too');
   
   return (
-    <AnimatePresence>
-      {isMenuOpen && (
-        <m.div
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          variants={slideUpCustomBezier}
+        <div
           className='account'>
           <div className='account-grid'>
             <div className='account-type'>
@@ -29,9 +21,7 @@ function AccountPage({ isMenuOpen }) {
           <button className='login-btn'>Accounts ?</button>
           <IconsComponent />
           <UserLogin />
-        </m.div>
-      )}
-    </AnimatePresence>
+        </div>
   );
 }
 

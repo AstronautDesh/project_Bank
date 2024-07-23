@@ -3,18 +3,14 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../css/homepage.css';
-import { slideUpLinear, staggerChildren, fadeInAnimation } from '../Components/animationUtils';
+import { staggerChildren, fadeInAnimation } from '../Components/animationUtils';
 
 function HomePage({ isMenuOpen }) {
   return (
     <AnimatePresence>
       {isMenuOpen && (
-        <motion.div
-          className='main-grid'
-          variants={ slideUpLinear }
-          initial="initial"
-          animate="animate"
-          exit="exit"
+        <div
+          className='home'
         >
           <motion.div className="menu-list" variants={staggerChildren}>
             <motion.h2 variants={fadeInAnimation}>
@@ -26,7 +22,10 @@ function HomePage({ isMenuOpen }) {
             <motion.h2 variants={fadeInAnimation}>
             <Link to="/contact" className='menu-link'>Contact Us</Link>
             </motion.h2>
-            <motion.h1 variants={fadeInAnimation}>Career</motion.h1>
+
+            <motion.h1 variants={fadeInAnimation}>
+              <Link to="/career" className='menu-link'> Career </Link>
+              </motion.h1>
           </motion.div>
           <motion.div className="location" variants={fadeInAnimation}>
             <div className="cards">
@@ -53,7 +52,7 @@ function HomePage({ isMenuOpen }) {
               <div className="address"> 45, Ado Central Business District, Ekiti, Nigeria</div>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       )}
     </AnimatePresence>
   );

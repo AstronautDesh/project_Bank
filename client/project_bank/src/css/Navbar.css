@@ -1,4 +1,5 @@
-@font-face {
+@media screen and (max-width: 480px) {
+  @font-face {
     font-family:'NovaSquare';
     src: url(../Fontz/NovaSquare-Regular.woff2);
 }
@@ -10,6 +11,9 @@
 .nav-grid{
   z-index: 10;
   background: none;
+}
+.brand{
+  visibility: hidden;
 }
 .brand, .btn{
     font-family:'NovaSquare';
@@ -38,3 +42,4 @@
   .icon-button:hover .icon {
     transform: scale(1.1);
   }
+}

@@ -1,20 +1,11 @@
 // AboutPage.js
 import React from "react";
-import { motion, AnimatePresence } from 'framer-motion';
 import "../css/aboutpage.css";
 import IconsComponent from '../Components/MenuList';
-import { slideUpEaseInOut } from "../Components/animationUtils";
 
 function AboutPage({ isMenuOpen }) {
   return (
-    console.log('im here'),
-    <AnimatePresence>
-      {isMenuOpen && (
-        <motion.div
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          variants={slideUpEaseInOut}
+        <div
           className="about"
         >
           <div className="about-grid">
@@ -49,9 +40,7 @@ function AboutPage({ isMenuOpen }) {
               <IconsComponent />
             </div>
           </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+        </div>
   );
 }
 

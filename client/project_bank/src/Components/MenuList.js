@@ -29,7 +29,7 @@ const IconsComponent = () => {
         </Col>
         </Link>
 
-        <Link to="#" className="col-link">
+        <Link to="/career" className="col-link">
         <Col xs={4} sm={3} md={2} className="text-center">
           <FaBriefcase size={20} />
           <p>Careers</p>

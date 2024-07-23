@@ -9,6 +9,7 @@ import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
 import AccountPage from './Pages/AccountPage';
 import ContactPage from './Pages/ContactPage';
+import CareerPage from './Pages/CareerPage';
 
 function Main() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ function Main() {
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
-    navigate('/main-grid');
+    navigate('/');
   }
 
   return (
@@ -26,10 +27,11 @@ function Main() {
       </header>
       <Navigate isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Routes>
-        <Route path="/main-grid" element={<HomePage isMenuOpen={isMenuOpen} />} />
+        <Route path="/" element={<HomePage isMenuOpen={isMenuOpen} />} />
         <Route path="/about" element={<AboutPage isMenuOpen={isMenuOpen} />} />
         <Route path="/account" element={<AccountPage isMenuOpen={isMenuOpen}/>} />
         <Route path="/contact" element={<ContactPage isMenuOpen={isMenuOpen} />} />
+        <Route path="/career" element={<CareerPage isMenuOpen={isMenuOpen} />} />
       </Routes>
     </div>
   );
