@@ -4,7 +4,10 @@ import './Main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Navigate from './Components/Navigate';
-//import UserLogin from './Components/UserLogin';
+import SignUpForm from './Components/SignUpForm';
+import AccountDashboard from './Components/AccountDashboard';
+import TransactionForm from './Components/TransactionForm';
+
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
 import AccountPage from './Pages/AccountPage';
@@ -32,6 +35,9 @@ function Main() {
         <Route path="/account" element={<AccountPage isMenuOpen={isMenuOpen}/>} />
         <Route path="/contact" element={<ContactPage isMenuOpen={isMenuOpen} />} />
         <Route path="/career" element={<CareerPage isMenuOpen={isMenuOpen} />} />
+        <Route path="/open_account" element={<SignUpForm isMenuOpen={isMenuOpen} />} />
+        <Route path="/account-dashboard" element={<AccountDashboard isMenuOpen={isMenuOpen} />} />
+        <Route path="/transaction_form" element={<TransactionForm isMenuOpen={isMenuOpen} />} />
       </Routes>
     </div>
   );

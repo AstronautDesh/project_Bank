@@ -1,9 +1,5 @@
 /*ContactPage Stylesheet */
   .contact {
-    width: var(--width);
-    height: var(--absoluteHeight);
-    font-family: 'Macondo';
-    background-color: var(--bgColorOverlay);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,7 +12,12 @@
     justify-content: center;
     align-items: center;
     height: 200px;
-    position: relative;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
   }
   
   .contact-pitch {
@@ -30,10 +31,7 @@
     align-items: center;
     font-weight: bold;
     text-shadow: .1rem .1rem 0px orchid;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 0px 1rem;
   }
 
   .icon-grid {
@@ -58,7 +56,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
   height: 100%;
-  background-color: var(--bgColorOverlay);
 }
 
 .icon-container::before {
@@ -88,6 +85,7 @@
 .icon {
   font-size: 2rem;
   transition: all 0.3s ease;
+  margin-bottom: 1rem;
   z-index: 1;
 }
 

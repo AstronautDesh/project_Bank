@@ -1,51 +1,72 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {}
 
+@media screen and (min-width: 481px) and (max-width: 834px) {
+  .brand {
+    font-size: 1.4rem;
+    font-weight: var(--fwThin);
+    visibility: visible;
+    font-family: 'Macondo';
   }
 
-  @media screen and (min-width: 481px) and (max-width: 834px){
-    .brand{
-      font-size: 1.4rem;
-      font-weight: var(--fwThin);
-      visibility: visible;
-      font-family: 'Macondo';
-    }
-    .brand, .btn{
-        padding: 1rem 2rem;
-    }
-    .btn{
-        font-weight: 600;
-        padding: .5rem;
-        width: 50px;
-        border: 2px solid red;
-    }
-      
-      .icon {
-         font-size: 2.5rem;
-         padding-right: 1rem;
-      }
-      
-      .icon-button:hover .icon {
-        transform: scale(1.1);
-      }
-
-      /* Header Styling For Tab*/
-
-      .Main-Container header {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: clamp(200px, 40vw, 400px);
-        height: clamp(150px, 20vh, 300px);
-        border: clamp(0.5rem, 2vw, 1rem) solid rgb(164, 7, 7);
-        box-shadow: clamp(0.1rem, 0.5vw, 0.2rem) clamp(0.15rem, 0.75vw, 0.3rem) clamp(0.1rem, 0.5vw, 0.2rem) rgb(113, 3, 110);
-      }
-      
-      .Main-Container header h1 {
-        font-size: clamp(1.5rem, calc(1.8rem + 3vw), 2.5rem);
-        font-weight: var(--fw);
-        font-family: 'Macondo';
-        margin-top: clamp(2rem, 10vh, 4rem);
-        height: fit-content;
-      }
+  .brand,
+  .btn {
+    padding: 1rem 2rem;
   }
+
+  .btn {
+    font-weight: 600;
+    padding: .5rem;
+    width: 50px;
+    border: 2px solid red;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+    padding-right: 1rem;
+  }
+
+  .icon-button:hover .icon {
+    transform: scale(1.1);
+  }
+
+  /* Header Styling For Tab*/
+
+  .Main-Container header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(200px, 40vw, 400px);
+    height: clamp(150px, 20vh, 300px);
+    border: clamp(0.5rem, 2vw, 1rem) solid rgb(164, 7, 7);
+    box-shadow: clamp(0.1rem, 0.5vw, 0.2rem) clamp(0.15rem, 0.75vw, 0.3rem) clamp(0.1rem, 0.5vw, 0.2rem) rgb(113, 3, 110);
+  }
+
+  .Main-Container header h1 {
+    font-size: clamp(1.5rem, calc(1.8rem + 3vw), 2.5rem);
+    font-weight: var(--fw);
+    font-family: 'Macondo';
+    margin-top: clamp(2rem, 10vh, 4rem);
+    height: fit-content;
+  }
+}
+
+@media screen and (min-width: 835px) {
+  .Main-Container header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(150px, 40vw, 350px);
+    height: clamp(200px, 20vh, 300px);
+    border: clamp(0.5rem, 2vw, 1rem) solid rgb(164, 7, 7);
+    box-shadow: clamp(0.1rem, 0.5vw, 0.2rem) clamp(0.15rem, 0.75vw, 0.3rem) clamp(0.1rem, 0.5vw, 0.2rem) rgb(113, 3, 110);
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    margin: 1rem 1rem 0px 0px;
+    color: lightcoral;
+  }
+}

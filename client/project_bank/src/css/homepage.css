@@ -1,10 +1,5 @@
 .home {
-  height: var(--normalHeight);
   display: flex;
-  overflow: hidden;
-  background-color: var(--bgColorOverlay);
-  z-index: 100;
-  padding: 0.5rem;
 }
 
 .menu-list {

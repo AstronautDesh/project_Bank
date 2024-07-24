@@ -1,7 +1,5 @@
 @media screen and (max-width: 480px) {
     .career{
-        width: var(--width);
-        height: var(--absoluteHeight);
         display: flex;
         justify-content: center;
         align-items: center;

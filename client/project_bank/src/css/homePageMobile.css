@@ -26,3 +26,32 @@
       }
 
 }
+
+
+@media screen and (min-width: 834px) {
+  .home {
+    height: var(--absoluteHeight);
+    overflow-y: auto;
+}
+
+.menu-list {
+    padding: 6rem 0px 0px .5rem;
+    height: fit-content;
+    padding-left: .9rem;
+}
+
+.menu-list h1 {
+    font-size: 8vw;
+    position: relative;
+    overflow: hidden;
+    margin: .3rem 0px 0px 0px;
+}
+  
+  .cards .header {
+    font-size: clamp(1rem, calc(.5rem + 2vw), 2.5rem);
+  }
+  .cards .address {
+    font-size: clamp(1rem, calc(.3rem + 2vw), 2.5rem);
+    padding-left: 1rem;
+  }
+}

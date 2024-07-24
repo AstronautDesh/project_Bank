@@ -1,11 +1,12 @@
-    .account{
+    .account {
         width: var(--width);
         height: var(--height);
-        font-family:'Macondo';
+        font-family: 'Macondo';
         position: relative;
         background-color: var(--bgColorOverlay);
     }
-    .account .login-btn{
+
+    .account .login-btn {
         position: absolute;
         top: 80%;
         right: 45%;
@@ -14,7 +15,8 @@
         width: 150px;
         visibility: hidden;
     }
-    .account .account-grid{
+
+    .account .account-grid {
         width: fit-content;
         display: grid;
         justify-content: center;
@@ -24,8 +26,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     .account-type,
-    .internet-banking{
+    .internet-banking {
         background-color: rgb(76, 4, 76);
         width: fit-content;
         margin: .5rem 0px;
@@ -35,15 +38,20 @@
         border-radius: .5rem;
         box-shadow: .1rem .2rem rgb(228, 215, 215);
     }
+
+    .linktag {
+        text-decoration: none;
+    }
+
     .account-type:hover,
-    .internet-banking:hover{
+    .internet-banking:hover {
         background-color: var(--hoverBgCol);
         transition: all .3s ease-in-out;
         scale: .9;
     }
+
     .account-type h3,
-    .internet-banking h3{
+    .internet-banking h3 {
         text-align: center;
         color: wheat;
     }
-

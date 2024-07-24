@@ -1,6 +1,10 @@
 .nav-grid{
-  z-index: 10;
+  z-index: 11;
   background: none;
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  height: 10%;
 }
 .brand{
   visibility: hidden;

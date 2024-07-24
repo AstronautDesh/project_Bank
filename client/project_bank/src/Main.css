@@ -52,6 +52,26 @@
   margin-top: clamp(2rem, 10vh, 4rem);
   height: fit-content;
 }
+.home,
+.about,
+.contact,
+.career,
+.open_account,
+.nav-grid,
+.account-dashboard,
+.transactionForm{
+  position: relative;
+  font-family: 'Macondo';
+  background-color: var(--bgColorOverlay);
+  z-index: 10;
+  height: var(--absoluteHeight);
+  width: var(--absoluteWidth);
+  padding: .5rem;
+  overflow-x: hidden;
+  margin: var(--margin);
+  padding: var(--padding);
+  box-sizing: border-box;
+}
 
 /* Transitions.css */
 .fade-enter {
