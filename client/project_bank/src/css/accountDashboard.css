@@ -58,5 +58,12 @@
         font-size: var(--fs);
         font-weight: var(--fwThin);
       }
+      .account-dashboard .back{
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        right: 2rem;
+        width: fit-content;
+    }
       
 }

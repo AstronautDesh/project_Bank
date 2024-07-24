@@ -3,7 +3,7 @@ import { FaPaperPlane, FaInbox, FaFileInvoiceDollar, FaEllipsisH } from 'react-i
 import { Link } from 'react-router-dom';
 import '../css/accountDashboard.css';
 
-const AccountDashboard = () => {
+const AccountDashboard = ({isMenuOpen}) => {
   return (
     <div className="account-dashboard">
       <div className="card-row">
@@ -34,6 +34,11 @@ const AccountDashboard = () => {
           <p>Current Balance: $10,000</p>
         </div>
       </div>
+
+      
+      <Link to='/account' className='linktag'>
+      <h3 className='back'>Go Back To Accounts</h3>
+      </Link>
     </div>
   );
 };

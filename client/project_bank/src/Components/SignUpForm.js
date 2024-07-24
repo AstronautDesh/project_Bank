@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/signUpForm.css';
 
 const SignUpForm = () => {
@@ -31,6 +32,10 @@ const SignUpForm = () => {
           <input type="submit" value="Submit" />
         </div>
       </form>
+
+      <Link to='/account' className='linktag'>
+      <h3 className='back'>Go Back To Accounts</h3>
+      </Link>
     </div>
   );
 };

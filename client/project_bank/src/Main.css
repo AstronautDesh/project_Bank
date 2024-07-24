@@ -59,7 +59,8 @@
 .open_account,
 .nav-grid,
 .account-dashboard,
-.transactionForm{
+.transaction-form
+{
   position: relative;
   font-family: 'Macondo';
   background-color: var(--bgColorOverlay);

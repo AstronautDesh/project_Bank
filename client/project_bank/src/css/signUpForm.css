@@ -72,4 +72,7 @@
     .open_account .inputbox:hover [type="button"] {
         background: linear-gradient(45deg, greenyellow, dodgerblue);
     }
+    .back{
+        text-align: center;
+    }
 }

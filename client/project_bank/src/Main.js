@@ -37,7 +37,7 @@ function Main() {
         <Route path="/career" element={<CareerPage isMenuOpen={isMenuOpen} />} />
         <Route path="/open_account" element={<SignUpForm isMenuOpen={isMenuOpen} />} />
         <Route path="/account-dashboard" element={<AccountDashboard isMenuOpen={isMenuOpen} />} />
-        <Route path="/transaction_form" element={<TransactionForm isMenuOpen={isMenuOpen} />} />
+        <Route path="/transaction-form" element={<TransactionForm isMenuOpen={isMenuOpen} />} />
       </Routes>
     </div>
   );
