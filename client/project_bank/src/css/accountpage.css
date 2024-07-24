@@ -1,4 +1,3 @@
-@media screen and (max-width: 480px) {
     .account{
         width: var(--width);
         height: var(--height);
@@ -47,4 +46,4 @@
         text-align: center;
         color: wheat;
     }
-}
+

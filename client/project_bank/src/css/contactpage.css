@@ -1,6 +1,4 @@
 /*ContactPage Stylesheet */
-
-@media screen and (max-width: 480px){
   .contact {
     width: var(--width);
     height: var(--absoluteHeight);
@@ -12,14 +10,13 @@
     position: relative;
   }
   
-  .pitch-box {
+  #pitch-box {
     font-family:'Macondo';
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
     position: relative;
-    background-color: var(--bgColorOverlay);
   }
   
   .contact-pitch {
@@ -105,5 +102,3 @@
 .whatsapp { color: #25D366; }
 .facebook { color: #3b5998; }
 .twitter { color: #1DA1F2; }
-
-}

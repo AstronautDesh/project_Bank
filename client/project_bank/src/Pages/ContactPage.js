@@ -1,8 +1,9 @@
 // Page/ContactPage.js
 import React from "react";
-import "../css/contactpage.css";
 import IconsComponent from "../Components/MenuList";
 import contactIcons from "../Components/ContactIcons";
+import "../css/contactpage.css";
+import "../css/contactMobile.css";
 
 function ContactPage({ isMenuOpen }) {
   console.log("im here too");

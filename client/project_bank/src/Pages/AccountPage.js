@@ -1,8 +1,9 @@
 // AccountPage.js
 import React from 'react';
-import '../css/accountpage.css';
 import IconsComponent from '../Components/MenuList';
 import UserLogin from '../Components/UserLogin';
+import '../css/accountpage.css';
+import '../css/accountMobile.css';
 
 function AccountPage({ isMenuOpen }) {
   console.log('im here too');

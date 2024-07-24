@@ -1,0 +1,12 @@
+@media screen and (max-width: 480px) {}
+
+@media screen and (min-width: 481px) and (max-width: 834px) {
+    .about .about-grid .about-grid-left .about-text{
+        width: var(--width);
+        height: var(--absoluteHeight);
+        height: auto;
+        padding: .8rem;
+        background-color: rgb(247, 227, 110, .8);
+        font-size: 1.5rem;
+    }
+}
