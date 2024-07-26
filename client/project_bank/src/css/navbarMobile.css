@@ -8,11 +8,6 @@
     font-family: 'Macondo';
   }
 
-  .brand,
-  .btn {
-    padding: 1rem 2rem;
-  }
-
   .btn {
     font-weight: 600;
     padding: .5rem;

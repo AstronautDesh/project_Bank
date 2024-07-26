@@ -1,38 +1,58 @@
-.nav-grid{
-  z-index: 11;
-  background: none;
-  position: fixed;
-  top: 1rem;
-  right: 1.5rem;
-  height: 10%;
-}
-.brand{
-  visibility: hidden;
-}
-.brand, .btn{
-    font-family:'NovaSquare';
-    padding: 0px 1rem;
-}
-.btn{
+
+  .nav-grid {
+    z-index: 11;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: fit-content;
+
+  }
+
+  .brand {
+    visibility: hidden;
+    font-size: var(--fs);
+    font-weight: var(--fw);
+  }
+
+  .btn {
     font-weight: 600;
     padding: .5rem;
-}
-.icon-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  box-sizing: border-box;
-}
-  
+  }
+
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+  }
+
   .icon {
     font-size: 1.5rem;
     transition: transform 0.3s ease;
     color: lightcoral;
   }
-  
+
   .icon-button:hover .icon {
     transform: scale(1.1);
   }
+
+@media screen and (min-width: 481px) and (max-width: 834px) {
+  .nav-grid {
+    margin: .5rem;
+    padding: .5rem;
+    box-sizing: border-box;
+
+  }
+  .brand{
+    visibility: visible;
+  }
+  .icon-button {
+    width: 200px;
+    height: 60px;
+    text-align: end;
+  }
+}

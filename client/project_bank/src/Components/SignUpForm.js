@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/signUpForm.css';
+import '../css/signupMobile.css';
 
 const SignUpForm = () => {
   return (

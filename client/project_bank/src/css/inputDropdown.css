@@ -1,9 +1,9 @@
-@media screen and (max-width: 480px) {
     .login-dropdown {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: relative;
       }
       
       .dropdown {
@@ -35,7 +35,7 @@
         font-size: var(--fs);
       }
       .dropdown-content button:hover{
-        transition: all .3s orangered;
+        transition: all .3s ease-in-out;
         color: wheat;
         font-weight: var(--fwThin);
         background-color: rgb(47, 5, 46);
@@ -50,5 +50,3 @@
         border: 1px solid #ccc;
         border-radius: 5px;
       }
-      
-}

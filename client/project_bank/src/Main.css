@@ -57,7 +57,6 @@
 .contact,
 .career,
 .open_account,
-.nav-grid,
 .account-dashboard,
 .transaction-form,
 .login-dropdown
@@ -73,6 +72,18 @@
   margin: var(--margin);
   padding: var(--padding);
   box-sizing: border-box;
+}
+
+/* Global Link for navigating to AccountsPage.js */
+.back {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(46, 2, 45);
+  font-weight: var(--fwThin);
+  width: 100%;
+  text-align: center;
 }
 
 /* Transitions.css */
