@@ -59,7 +59,8 @@
 .open_account,
 .nav-grid,
 .account-dashboard,
-.transaction-form
+.transaction-form,
+.login-dropdown
 {
   position: relative;
   font-family: 'Macondo';

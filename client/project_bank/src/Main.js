@@ -39,7 +39,7 @@ function Main() {
         <Route path="/open_account" element={<SignUpForm isMenuOpen={isMenuOpen} />} />
         <Route path="/account-dashboard" element={<AccountDashboard isMenuOpen={isMenuOpen} />} />
         <Route path="/transaction-form" element={<TransactionForm isMenuOpen={isMenuOpen} />} />
-        <Route path="/login" element={<SecurityInputDropdown isMenuOpen={isMenuOpen} />} />
+        <Route path="/login-dropdown" element={<SecurityInputDropdown isMenuOpen={isMenuOpen} />} />
       </Routes>
     </div>
   );

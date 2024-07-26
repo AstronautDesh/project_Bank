@@ -29,7 +29,7 @@ const SignUpForm = () => {
           <span>Confirm Password</span>
         </div>
         <div className="inputbox">
-          <input type="submit" value="Submit" />
+          <input className='submit' type="submit" value="Submit" />
         </div>
       </form>
 
