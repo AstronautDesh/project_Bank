@@ -1,33 +1,28 @@
-
   .nav-grid {
     z-index: 11;
-    background-color: transparent;
+    background-color: var(--bgColorThin);
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     height: fit-content;
-
+    padding: .5rem;
+    font-family: 'Macondo';
   }
 
   .brand {
-    visibility: hidden;
+    display: none;
     font-size: var(--fs);
     font-weight: var(--fw);
-  }
-
-  .btn {
-    font-weight: 600;
-    padding: .5rem;
   }
 
   .icon-button {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
     width: 40px;
     height: 40px;
     box-sizing: border-box;
+    margin-left: 90%;
   }
 
   .icon {
@@ -41,18 +36,23 @@
   }
 
 @media screen and (min-width: 481px) and (max-width: 834px) {
-  .nav-grid {
-    margin: .5rem;
-    padding: .5rem;
-    box-sizing: border-box;
-
-  }
   .brand{
-    visibility: visible;
+    display: block;
+    font-size: 2rem;
+    text-shadow: .1rem .1rem orchid;
   }
   .icon-button {
     width: 200px;
     height: 60px;
     text-align: end;
+    margin: 0;
+  }
+  .icon {
+    font-size: 1.5rem;
+    font-weight: var(--fw);
+    color: rgb(99, 5, 5);
+  }
+  .icon-button {
+    margin: 0;
   }
 }

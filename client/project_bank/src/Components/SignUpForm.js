@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/signUpForm.css';
-import '../css/signupMobile.css';
+//import '../css/signupMobile.css';
 import Modal from './Modal'; // Importing the Modal component
 
 const SignUpForm = () => {

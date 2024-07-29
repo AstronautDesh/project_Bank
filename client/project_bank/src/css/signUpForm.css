@@ -42,17 +42,15 @@
         border-radius: 10px;
         font-size: 1.2em;
     }
-
     .open_account .inputbox input[type="submit"] {
         background-color: orchid;
         color: #000;
-        /* Ensure text is visible */
         cursor: pointer;
         position: relative;
         overflow: hidden;
         z-index: 1;
     }
-
+    
     .open_account .inputbox input[type="submit"]::before {
         content: '';
         position: absolute;
@@ -61,14 +59,15 @@
         width: 100%;
         height: 100%;
         background-color: orangered;
-        transition: all 0.3s ease;
+        transition: left 0.3s ease;
         z-index: -1;
     }
-
-    .open_account .inputbox input[type="submit"]:hover::before {
+    
+    .open_account .inputbox input[type="submit"]:hover::before,
+    .open_account .inputbox input[type="submit"]:active::before {
         left: 0;
     }
-
+    
     .open_account .inputbox span {
         position: absolute;
         top: 14px;
@@ -115,4 +114,39 @@
       .status-indicator.success,
       .status-indicator.failure {
         animation: fadeOut 2s ease-in-out 1s forwards;
+      }
+
+      /*** Media Query ***/
+
+      @media screen and (min-width: 481px) and (max-width: 834px){
+        .open_account h1 {
+            font-size: 2em;
+        }
+        .open_account .inputbox {
+            height: 50px;
+            margin-bottom: 3rem;
+            padding: 0px .5rem;
+        }
+        
+    .open_account .inputbox input {
+        padding: .5rem;
+        height: 70px;
+        border-radius: .4rem;
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    .open_account .inputbox span {
+        top: 70px;
+        left: 20px;
+        color: rgb(30, 1, 29);
+        font-size: var(--fs);
+        background-color: wheat;
+    }
+    .open_account .inputbox input:focus~span,
+    .open_account .inputbox input:valid~span {
+        transform: translateX(-3px) translateY(-50px);
+        font-size: .9rem;
+        font-weight: var(--fwThin);
+        background-color: transparent;
+    }
       }
