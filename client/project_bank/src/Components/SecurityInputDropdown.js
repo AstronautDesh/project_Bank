@@ -1,21 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../css/inputDropdown.css';
-//import '../css/inputDropdownMobile.css';
 import { verifyCredentials } from '../services/authService';
 
 const SecurityInputDropdown = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [inputValue, setInputValue] = useState('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
+  const timeoutRef = useRef(null);
+
+  const resetState = () => {
+    setSelectedOption(null);
+    setInputValue('');
+    setIsDropdownOpen(false);
+  };
+
+  const startTimeout = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(resetState, 5000);
+  };
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(prev => !prev);
+    startTimeout();
+  };
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     setInputValue('');
+    startTimeout();
   };
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
+    startTimeout();
   };
 
   const handleSubmit = async (e) => {
@@ -35,30 +54,40 @@ const SecurityInputDropdown = () => {
     }
   };
 
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
   return (
     <div className="login-dropdown">
       <form onSubmit={handleSubmit}>
         <div className="dropdown">
-          <button type="button" className="dropdown-button">
+          <button type="button" className="dropdown-button" onClick={handleDropdownToggle}>
             Select Security Type
           </button>
-          <div className="dropdown-content">
-            <button type="button" onClick={() => handleOptionSelect('pin')}>PIN</button>
-            <button type="button" onClick={() => handleOptionSelect('password')}>Password</button>
-          </div>
+          {isDropdownOpen && (
+            <div className="dropdown-content">
+              <button className='btn' type="button" onClick={() => handleOptionSelect('pin')}>PIN</button>
+              <button className='btn' type="button" onClick={() => handleOptionSelect('password')}>Password</button>
+            </div>
+          )}
         </div>
         {selectedOption && (
-          <input
-            type={selectedOption === 'pin' ? 'number' : 'password'}
-            placeholder={`Enter ${selectedOption}`}
-            value={inputValue}
-            onChange={handleInputChange}
-          />
+          <div className='blocLayout'>
+            <input
+              type={selectedOption === 'pin' ? 'number' : 'password'}
+              placeholder={`Enter ${selectedOption}`}
+              value={inputValue}
+              onChange={handleInputChange}
+            />
+            <button type="submit" className="submit-button">Submit</button>
+          </div>
         )}
-        <button type="submit">Submit</button>
       </form>
-      <Link to='/account' className='linktag'>
-        <h3 className='back'>Go Back To Accounts</h3>
+      <Link to='/account' className='back'>
+        <h3>Go Back To Accounts</h3>
       </Link>
     </div>
   );

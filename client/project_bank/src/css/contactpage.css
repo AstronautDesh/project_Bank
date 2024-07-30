@@ -3,16 +3,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
   }
   
   #pitch-box {
-    font-family:'Macondo';
+    font-family:var(--fontFamilyMacondo);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
-    position: absolute;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -38,7 +36,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: .1px;
-    width: 100%;
+    width: var(--width);
     height: 200px;
     position: absolute;
     bottom: 0;
@@ -55,7 +53,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
-  height: 100%;
+  height: var(--height);
 }
 
 .icon-container::before {
@@ -68,8 +66,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: var(--width);
+  height: var(--height);
   padding: 10px;
   background-color: rgba(38, 2, 37, 0.9);
   color: white;
@@ -100,3 +98,5 @@
 .whatsapp { color: #25D366; }
 .facebook { color: #3b5998; }
 .twitter { color: #1DA1F2; }
+
+@media screen and (min-width: 481px) and (max-width: 834px) {}

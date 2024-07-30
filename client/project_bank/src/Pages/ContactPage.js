@@ -3,7 +3,6 @@ import React from "react";
 import IconsComponent from "../Components/MenuList";
 import contactIcons from "../Components/ContactIcons";
 import "../css/contactpage.css";
-import "../css/contactMobile.css";
 
 function ContactPage({ isMenuOpen }) {
   console.log("im here too");

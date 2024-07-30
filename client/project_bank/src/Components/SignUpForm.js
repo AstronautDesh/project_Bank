@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/signUpForm.css';
-//import '../css/signupMobile.css';
 import Modal from './Modal'; // Importing the Modal component
 
 const SignUpForm = () => {
@@ -87,8 +86,8 @@ const SignUpForm = () => {
           <input type="password" name="confirm_password" required="required" onChange={handleChange} value={formData.confirm_password} />
           <span>Confirm Password</span>
         </div>
-        <div className="inputbox">
-          <input className='submit' type="submit" value="Submit" />
+        <div className='submit-btn'>
+          <button className='btn'>Submit</button>
         </div>
       </form>
 

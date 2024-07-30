@@ -28,7 +28,8 @@
   .icon {
     font-size: 1.5rem;
     transition: transform 0.3s ease;
-    color: lightcoral;
+    font-weight: var(--fw);
+    color: rgb(99, 5, 5);
   }
 
   .icon-button:hover .icon {
@@ -54,5 +55,22 @@
   }
   .icon-button {
     margin: 0;
+  }
+}
+@media screen and (min-width: 835px) and (max-width: 1290px){
+  .brand{
+    display: block;
+    font-size: 2rem;
+    text-shadow: .1rem .1rem orchid;
+  }
+  .icon-button {
+    width: 200px;
+    height: 60px;
+    text-align: end;
+    margin: .5rem 0px;
+    padding-right: 2rem;
+  }
+  .icon {
+    font-size: 2rem;
   }
 }

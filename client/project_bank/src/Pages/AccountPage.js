@@ -3,7 +3,6 @@ import React from 'react';
 import IconsComponent from '../Components/MenuList';
 import { Link } from 'react-router-dom';
 import '../css/accountpage.css';
-import '../css/accountMobile.css';
 
 function AccountPage({ isMenuOpen }) {
   console.log('im here too');
@@ -24,7 +23,6 @@ function AccountPage({ isMenuOpen }) {
             </div>
             </Link>
           </div>
-          <button className='login-btn'>Accounts ?</button>
           <IconsComponent />
         </div>
   );

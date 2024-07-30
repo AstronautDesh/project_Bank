@@ -2,7 +2,6 @@
 import React from "react";
 import IconsComponent from '../Components/MenuList';
 import "../css/aboutpage.css";
-import "../css/aboutMobile.css";
 
 function AboutPage({ isMenuOpen }) {
   return (

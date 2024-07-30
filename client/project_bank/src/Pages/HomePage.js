@@ -3,7 +3,6 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../css/homepage.css';
-import '../css/homePageMobile.css';
 import { staggerChildren, fadeInAnimation } from '../Components/animationUtils';
 
 function HomePage({ isMenuOpen }) {
@@ -24,9 +23,9 @@ function HomePage({ isMenuOpen }) {
             <Link to="/contact" className='menu-link'>Contact Us</Link>
             </motion.h2>
 
-            <motion.h1 variants={fadeInAnimation}>
+            <motion.h2 variants={fadeInAnimation}>
               <Link to="/career" className='menu-link'> Career </Link>
-              </motion.h1>
+              </motion.h2>
           </motion.div>
           <motion.div className="location" variants={fadeInAnimation}>
             <div className="cards">

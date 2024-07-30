@@ -1,7 +1,3 @@
-@font-face {
-    font-family:'Macondo';
-    src: url(../Fontz/Macondo-Regular.woff);
-}
 .menu-lists{
     width: 5%;
     height: auto;
@@ -36,6 +32,6 @@
 }
 p{
     font-size: .9rem;
-    font-family:'Macondo';
+    font-family: var(--fontFamilyMacondo);
     text-align: center;
 }

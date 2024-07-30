@@ -1,10 +1,3 @@
-.about{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
 .about .about-grid{
     display: flex;
     flex-direction: column-reverse;
@@ -22,9 +15,9 @@
     height: auto;
     word-wrap: break-word;
     white-space: pre-wrap;
-    font-family:'Macondo';
+    font-family: var(  --fontFamilyMacondo);
     hyphens: auto;
-    padding: .5rem;
+    padding: .9rem;
     background-color: var(--bgColorOverlay);
     --primaryColor: rgb(74, 22, 2);
     line-height: 1.4;
@@ -41,4 +34,24 @@
     height: 400px;
     padding: .9rem;
     box-shadow: .3rem .1rem rgb(57, 38, 2);
+}
+
+/** Media Query **/
+@media screen and (min-width: 835px) and (max-width: 1290px) {
+    .about{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+  .about-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-grid-left{
+    width: 60%;
+  }
+  .about .about-grid .about-grid-right{
+    width: 40%;
+  }
 }
